@@ -1,12 +1,12 @@
 from tkinter import *
 
 top = Tk()
-top.title('Calculator 2.0')
+top.title('Calculadora 1.0')
 top.geometry("350x430")
 top.resizable(0,0)
 top.configure(bg='black')
 
-#-----------------------------------FUNCTIOS--------------------------------------
+#-----------------------------------FUNCIONES--------------------------------------
 def btn_click(input):
     global expression
     expression = expression + str(input)
@@ -28,7 +28,7 @@ input_text = StringVar()
 
 display = Entry(top,relief=RIDGE,bd=9,width=11,font=('arial',38,'bold'),fg='white',bg='#CBCBCB',textvariable = input_text,justify=RIGHT).place(x=13,y=14)
 
-#-------------------------------------BUTTONS-------------------------------------
+#-------------------------------------Botones-------------------------------------
 clear_button = Button(top,text='C',width=4,fg='white',bg='red',font=('',20,'bold'),command = lambda : clear()).place(x=13,y= 100)
 multiply_button = Button(top,text='X',width=4,fg='white',bg='orange',font=('',20,'bold'),command = lambda : btn_click("*")).place(x=96,y= 100)
 divide_button = Button(top,text='/',width=4,fg='white',bg='orange',font=('',20,'bold'),command = lambda : btn_click("/")).place(x=179,y= 100)
